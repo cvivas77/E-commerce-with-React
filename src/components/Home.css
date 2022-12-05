@@ -1,21 +1,21 @@
 @font-face {
   font-family: Trixie-REGULAR;
-  src: url(src/fonts/Trixie-REGULAR.ttf);
+  src: url(../fonts/Trixie-REGULAR.ttf);
 }
 
 @font-face {
   font-family: OffsettDemoRegular;
-  src: url(src/fonts/OffsettDemoRegular.ttf);
+  src: url(../fonts/OffsettDemoRegular.ttf);
 }
 
 @font-face {
   font-family:Starotto;
-  src: url(src/fonts/Starotto.ttf);
+  src: url(../fonts/Starotto.ttf);
 }
 
 @font-face {
   font-family: casa_sans;
-  src: url(src/fonts/casa_sans.ttf);
+  src: url(../fonts/casa_sans.ttf);
 }
 
 .navbar .title{
