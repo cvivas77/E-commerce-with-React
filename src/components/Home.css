@@ -99,3 +99,18 @@
   overflow: hidden;
   background-color: rgb(140, 148, 193);
 }
+
+.img-car{
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(4deg) brightness(103%) contrast(103%);
+}
+
+.img-login{
+  
+   width: 50px;
+   height: 50px;
+   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(4deg) brightness(103%) contrast(103%);
+}
