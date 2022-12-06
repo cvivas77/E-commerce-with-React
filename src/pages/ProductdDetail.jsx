@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {useParams} from 'react-router-dom'
-import { getProductsThunk } from '../store/slice/products.slice';
+import { getProductsThunk} from '../store/slice/products.slice';
 import {Link} from 'react-router-dom'
 import '../components/DetailProduct.css'
+import { useState } from 'react';
+import { createCardThunk } from '../store/slice/card.slice';
+import { Button } from 'react-bootstrap';
 
 const ProductdDetail = () => {
 
@@ -22,6 +25,23 @@ const ProductdDetail = () => {
   const productRelate = productList.filter(productItem =>
     productItem.category?.id === products.category?.id && productItem.id !== products.id);
 
+
+   
+    const [inputValue, setInputValue] = useState("");
+
+  
+ 
+    const addToProduct = () => {
+      const product = {
+        id: products.id,
+       quantity: inputValue,
+      } 
+      
+      dispatch(createCardThunk(product))
+       
+    }
+
+
   return (
     <div>
     <section className='container-detail'>
@@ -31,6 +51,10 @@ const ProductdDetail = () => {
         <h1 >{products?.title}</h1>
         <p>{products?.description}</p>
         <p>Price {products?.price}$</p>
+        </div>
+        <div>
+          <input className='input-cart' type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value) }  name="" id="" />
+          <Button onClick={addToProduct}>Add to Cart</Button>
         </div>
       </div>
       

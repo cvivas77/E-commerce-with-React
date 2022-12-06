@@ -72,3 +72,16 @@
   font-size: 30px;
   padding: 15px 15px;
 }
+
+.input-cart{
+  width: 210px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid grey;
+  background: rgba(141, 154, 255, 0.203);
+  text-align: center;
+}
+
+.container-cart{
+  background-color: blue;
+}

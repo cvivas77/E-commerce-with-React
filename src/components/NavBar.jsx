@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Offcanvas } from 'react-bootstrap';
+import React from 'react';
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
+import Card from './Card';
 
 const NavBar = () => {
 
@@ -31,15 +32,7 @@ const NavBar = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-          </Offcanvas.Body>
-      </Offcanvas>
+        <Card show={show} handleClose={handleClose} />
     </>
       );
     }
